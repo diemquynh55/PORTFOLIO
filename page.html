@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio · DiemQuynh</title>
+
+    <!-- Google Fonts: Quicksand + Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 cho Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== TOP BAR: LANGUAGE SWITCHER ===== -->
+        <div class="top-bar">
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-vi" onclick="switchLanguage('vi')"> VI </button>
+                <button class="lang-btn" id="btn-en" onclick="switchLanguage('en')"> EN </button>
+            </div>
+        </div>
+
+        <!-- ===== HEADER / HERO ===== -->
+<header class="hero">
+    <div class="hero-text">
+        <div class="greeting">
+            <span class="lang-vi">👋 Xin chào, mình là</span>
+            <span class="lang-en" style="display:none;">👋 Hi there, I'm</span>
+        </div>
+        <h1>Diem Quynh</h1>
+        <div class="tagline">
+            <span class="highlight">✨ Data Processing &amp; Engineering</span> 
+            <span style="display:inline-block;">Enthusiast</span>
+        </div>
+        <p style="margin-top: 8px; color: #4A4A4A;">
+            <span class="lang-vi">Chuyên xử lý &amp; chuẩn hóa dữ liệu, tự động hóa quy trình ETL và trực quan hóa báo cáo.</span>
+            <span class="lang-en" style="display:none;">Focusing on data processing, ETL pipelines automation, and clean data visualization.</span>
+        </p>
+    </div>
+    <div class="hero-avatar">
+        <!-- Khung avatar có hiệu ứng búp bê/nhún nhảy mềm mại -->
+        <div class="avatar-wrapper">
+            <img src="pic/avatar.jpg" alt="Diem Quynh" />
+            <!-- Thẻ trang trí nhỏ nhắn dễ thương xung quanh avatar -->
+            <span class="floating-badge badge-1">✨ SQL</span>
+            <span class="floating-badge badge-2">🐍 Python</span>
+            <span class="floating-badge badge-3">📊 Power BI</span>
+        </div>
+    </div>
+</header>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects">
+            <h2>
+                <span class="lang-vi">Dự án nổi bật</span>
+                <span class="lang-en" style="display:none;">Featured Projects</span>
+            </h2>
+            <div class="filter-tabs" id="filterTabs">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="lang-vi">Tất cả</span>
+                    <span class="lang-en" style="display:none;">All</span>
+                </button>
+                <button class="filter-btn" data-filter="bi">Power BI / BI</button>
+                <button class="filter-btn" data-filter="python">Data &amp; Python &amp; SQL</button>
+                <button class="filter-btn" data-filter="web">Web / Interactive</button>
+            </div>
+
+            <div class="project-grid" id="projectGrid">
+                
+                <!-- Card 1: Customer Sentiment -->
+                <div class="project-card" data-category="bi">
+                    <div class="project-thumb">
+                        <img src="pic/bi1.jpg" alt="Sentiment Dashboard" />
+                    </div>
+                    <div class="project-title">Customer Sentiment Analysis - Dashboard</div>
+                    <div class="project-desc">
+                        <span class="lang-vi">Huấn luyện <b>mô hình Machine Learning</b> phân loại cảm xúc người dùng từ đánh giá và trực quan hóa insight trên <b>Power BI Dashboard.</b></span>
+                        <span class="lang-en" style="display:none;">Train a <b>Machine Learning model</b> to classify user review sentiment and visualize insights on a <b>Power BI Dashboard.</b></span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="badge blue">#PowerBI</span>
+                        <span class="badge lavender">#Python</span>
+                        <span class="badge mint">#NLP</span>
+                        <span class="badge blue">#DAX</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-primary modal-trigger" 
+                            data-case-vi="Phân Tích và Trực Quan hoá Cảm xúc Khách hàng · Huấn luyện mô hình Sentiment Analysis (Python/Jupyter) xử lý dữ liệu đánh giá, kết hợp Power BI & DAX để xây dựng Dashboard theo dõi chỉ số hài lòng người dùng."
+                            data-case-en="Customer Sentiment Analysis & Visualization · Train a Sentiment Analysis model (Python/Jupyter) on review data, combined with Power BI & DAX to build a user satisfaction tracking dashboard.">
+                            <span class="lang-vi">Xem Case Study</span>
+                            <span class="lang-en" style="display:none;">View Case Study</span>
+                        </button>
+                        <a href="https://github.com/diemquynh55/Quynh-s-Sentiment-Dashboard.git" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Netflix SQL -->
+                <div class="project-card" data-category="python">
+                    <div class="project-thumb">
+                        <img src="pic/py1.png" alt="Netflix Data Cleaning" />
+                    </div>
+                    <div class="project-title">Netflix Data Cleaning & Exploratory Analysis</div>
+                    <div class="project-desc">
+                        <span class="lang-vi">Xây dựng quy trình <b>làm sạch dữ liệu</b>, chuẩn hóa cấu trúc và khai thác insight bằng <b>SQL & Python.</b></span>
+                        <span class="lang-en" style="display:none;">Build <b>data cleaning pipelines</b>, normalize structures, and extract insights using <b>SQL & Python.</b></span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="badge mint">#SQL</span>
+                        <span class="badge lavender">#Python</span>
+                        <span class="badge mint">#Pandas</span>
+                        <span class="badge blue">#DataCleaning</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-primary modal-trigger" 
+                            data-case-vi="Netflix Data Cleaning by SQL · Thiết kế cơ sở dữ liệu và chuẩn hóa dữ liệu trùng lặp, dữ liệu thiếu. Sử dụng JOIN, CTE, Aggregate & Window Functions trong SQL để trả lời các bài toán phân tích kinh doanh."
+                            data-case-en="Netflix Data Cleaning by SQL · Database design and handling duplicate/missing values. Using JOINs, CTEs, Aggregations & Window Functions in SQL to answer key business questions.">
+                            <span class="lang-vi">Xem Case Study</span>
+                            <span class="lang-en" style="display:none;">View Case Study</span>
+                        </button>
+                        <a href="https://github.com/diemquynh55/Netflix-SQL-Project/tree/main/SQL%20Scripts" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Auto Data Crawler (Savills) -->
+                <div class="project-card" data-category="python">
+                    <div class="project-thumb">
+                        <img src="pic/py3.jpg" alt="Automated Data Crawler" />
+                    </div>
+                    <div class="project-title">Automated WorkOrder & Feedback Data Crawler</div>
+                    <div class="project-desc">
+                        <span class="lang-vi">Xây dựng công cụ <b>cào dữ liệu tự động</b> từ API quản lý tòa nhà, đa luồng xử lý và xuất <b>báo cáo Audit.</b></span>
+                        <span class="lang-en" style="display:none;">Build an <b>automated data scraping tool</b> via property management APIs, multithreading processing, and exporting <b>Audit reports.</b></span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="badge lavender">#Python</span>
+                        <span class="badge mint">#API</span>
+                        <span class="badge blue">#Pandas</span>
+                        <span class="badge lavender">#Automation</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-primary modal-trigger" 
+                            data-case-vi="Automated WorkOrder & Feedback Data Crawler · Xây dựng kịch bản Python tự động cào dữ liệu API (WorkOrders & CommentBoxes), tích hợp ThreadPoolExecutor đa luồng, làm sạch chuỗi Regex ký tự lỗi, lọc ngày linh hoạt và tự động đánh giá trạng thái kiểm toán xuất file Excel."
+                            data-case-en="Automated WorkOrder & Feedback Data Crawler · Automated Python script scraping API data (WorkOrders & CommentBoxes), integrated ThreadPoolExecutor, clean illegal Regex characters, flexible date filters, and auto-evaluate audit statuses to Excel.">
+                            <span class="lang-vi">Xem Case Study</span>
+                            <span class="lang-en" style="display:none;">View Case Study</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Sentiment NLP Model Training -->
+                <div class="project-card" data-category="python">
+                    <div class="project-thumb">
+                        <img src="pic/py2.jpg" alt="Sentiment NLP Model" />
+                    </div>
+                    <div class="project-title">Amazon Reviews Sentiment Model Training</div>
+                    <div class="project-desc">
+                        <span class="lang-vi">Huấn luyện <b>mô hình Machine Learning NLP</b> phân loại phản hồi khách hàng và xuất dữ liệu dự báo cho <b>Power BI.</b></span>
+                        <span class="lang-en" style="display:none;">Train an <b>NLP Machine Learning model</b> to classify customer reviews and export prediction data for <b>Power BI.</b></span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="badge lavender">#Python</span>
+                        <span class="badge mint">#NLP</span>
+                        <span class="badge blue">#Scikit-Learn</span>
+                        <span class="badge lavender">#TF-IDF</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-primary modal-trigger" 
+                            data-case-vi="Amazon Reviews Sentiment Model Training · Xử lý tiền dữ liệu văn bản (NLTK, loại bỏ HTML/Stopwords), giải quyết mất cân bằng lớp (Balanced Class Weight), huấn luyện mô hình TF-IDF + Logistic Regression đạt Accuracy 93% và xuất file dự báo xác suất để nhúng vào Sentiment Dashboard."
+                            data-case-en="Amazon Reviews Sentiment Model Training · Text preprocessing (NLTK, HTML/Stopwords removal), handling class imbalance, training TF-IDF + Logistic Regression (93% Accuracy), and exporting prediction probabilities for Power BI.">
+                            <span class="lang-vi">Xem Case Study</span>
+                            <span class="lang-en" style="display:none;">View Case Study</span>
+                        </button>
+                        <a href="https://github.com/diemquynh55/Quynh-s-Sentiment-Dashboard/blob/main/TrainModelSentimentalReview.ipynb" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Card 5: VietEdu Odyssey -->
+                <div class="project-card" data-category="web">
+                    <div class="project-thumb">
+                        <img src="pic/web1.png" alt="VietEdu Odyssey" />
+                    </div>
+                    <div class="project-title">VietEdu Odyssey - Interactive Math Learning Website</div>
+                    <div class="project-desc">
+                        <span class="lang-vi">Website <b>gamified học toán tiểu học</b> kết hợp cốt chuyện phiêu lưu tương tác, giúp tăng hứng thú học tập cho học sinh.</span>
+                        <span class="lang-en" style="display:none;">A <b>gamified elementary math learning website</b> combining interactive adventure storylines to enhance student engagement.</span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="badge blue">#React</span>
+                        <span class="badge lavender">#TypeScript</span>
+                        <span class="badge mint">#Supabase</span>
+                        <span class="badge blue">#Gamification</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-primary modal-trigger" 
+                            data-case-vi="VietEdu Odyssey · Đồ án tốt nghiệp xây dựng nền tảng web gamification toán tiểu học. Tích hợp React, TypeScript và Supabase quản lý cơ sở dữ liệu thời gian thực, thiết kế các cốt truyện học tập theo khối lớp giúp tối ưu trải nghiệm người dùng tiểu học."
+                            data-case-en="VietEdu Odyssey · Graduation project building a gamified math learning web platform for primary students. Built with React, TypeScript, and Supabase for real-time database management and interactive story modules.">
+                            <span class="lang-vi">Xem Case Study</span>
+                            <span class="lang-en" style="display:none;">View Case Study</span>
+                        </button>
+                        <a href="https://vieteduodyssey.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="fas fa-globe"></i> Live</a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Socio-Economic Dashboard -->
+                <div class="project-card" data-category="bi">
+                    <div class="project-thumb">
+                        <img src="pic/bi2.jpg" alt="Socio-Economic Dashboard" />
+                    </div>
+                    <div class="project-title">Social-Economic Data Dashboard</div>
+                    <div class="project-desc">
+                        <span class="lang-vi">Tổng quan bức tranh <b>Kinh tế - Xã hội Việt Nam</b> sau điều chỉnh, sáp nhập địa giới hành chính trên <b>Power BI Dashboard.</b></span>
+                        <span class="lang-en" style="display:none;">Overview of <b>Vietnam's Socio-Economic profile</b> following administrative boundary adjustments on <b>Power BI Dashboard.</b></span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="badge blue">#PowerBI</span>
+                        <span class="badge mint">#DataAnalysis</span>
+                        <span class="badge lavender">#DAX</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-primary modal-trigger" 
+                            data-case-vi="Dashboard Dữ Liệu Kinh Tế Xã Hội Việt Nam · Giám sát trực quan các chỉ số GDP tổng thể, Dân số, Diện tích, Mật độ dân số và Thu nhập bình quân sau sáp nhập địa giới."
+                            data-case-en="Vietnam Socio-Economic Data Dashboard · Visual monitoring of key KPIs including total GDP, Population, Land Area, Population Density, and Average Income post-merger.">
+                            <span class="lang-vi">Xem Case Study</span>
+                            <span class="lang-en" style="display:none;">View Case Study</span>
+                        </button>
+                        <a href="https://github.com/diemquynh55/PowerBI-projects" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Card 7: Sales Management Dashboard -->
+                <div class="project-card" data-category="bi">
+                    <div class="project-thumb">
+                        <img src="pic/bi3.jpg" alt="Sales Management Dashboard" />
+                    </div>
+                    <div class="project-title">Sales Management Dashboard</div>
+                    <div class="project-desc">
+                        <span class="lang-vi">Giám sát <b>hiệu suất kinh doanh</b> chuỗi cửa hàng toàn quốc, theo dõi doanh thu và lợi nhuận trên <b>Power BI.</b></span>
+                        <span class="lang-en" style="display:none;">Monitor <b>nationwide store chain sales performance</b>, tracking revenue and profit margins on <b>Power BI.</b></span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="badge blue">#PowerBI</span>
+                        <span class="badge blue">#DAX</span>
+                        <span class="badge mint">#SalesAnalytics</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-primary modal-trigger" 
+                            data-case-vi="Dashboard Quản Lý Bán Hàng Toàn Quốc · Theo dõi hiệu suất kinh doanh chuỗi cửa hàng, quản lý Tổng doanh thu, Tổng lợi nhuận và Tỷ suất lợi nhuận theo thời gian & khu vực."
+                            data-case-en="Nationwide Sales Management Dashboard · Track retail performance across store chains, managing Total Revenue, Gross Profit, and Profit Margins over time & regions.">
+                            <span class="lang-vi">Xem Case Study</span>
+                            <span class="lang-en" style="display:none;">View Case Study</span>
+                        </button>
+                        <a href="https://github.com/diemquynh55/PowerBI-projects" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Card 8: Office Furniture Dashboard -->
+                <div class="project-card" data-category="bi">
+                    <div class="project-thumb">
+                        <img src="pic/bi4.jpg" alt="Furniture Performance Dashboard" />
+                    </div>
+                    <div class="project-title">Office Furniture Performance Dashboard</div>
+                    <div class="project-desc">
+                        <span class="lang-vi">Phân tích chuyên sâu <b>vận hành đơn hàng</b>, hành vi khách hàng và cơ cấu doanh thu ngành nội thất trên <b>Power BI.</b></span>
+                        <span class="lang-en" style="display:none;">Deep-dive analysis of <b>order fulfillment operations</b>, customer behavior, and revenue breakdown on <b>Power BI.</b></span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="badge blue">#PowerBI</span>
+                        <span class="badge lavender">#BusinessIntelligence</span>
+                        <span class="badge mint">#Operations</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-primary modal-trigger" 
+                            data-case-vi="Dashboard Hiệu Suất Kinh Doanh Nội Thất · Phân tích 9,999 đơn hàng & 6,128 khách hàng, theo dõi mốc 24.78M doanh thu và tối ưu Tỷ lệ hoàn thành đơn hàng 67%."
+                            data-case-en="Office Furniture Performance Dashboard · Analyzing 9,999 orders & 6,128 customers, tracking $24.78M in revenue, and optimizing a 67% order fulfillment rate.">
+                            <span class="lang-vi">Xem Case Study</span>
+                            <span class="lang-en" style="display:none;">View Case Study</span>
+                        </button>
+                        <a href="https://github.com/diemquynh55/PowerBI-projects" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE & SKILLS ===== -->
+        <section id="experience">
+            <h2>
+                <span class="lang-vi">Hành trình &amp; Kinh nghiệm</span>
+                <span class="lang-en" style="display:none;">Experience &amp; Career Journey</span>
+            </h2>
+            <p class="section-subtext">
+                <span class="lang-vi">Nhấn vào từng mốc kinh nghiệm để xem chi tiết công việc ✨</span>
+                <span class="lang-en" style="display:none;">Click on each role to expand work details ✨</span>
+            </p>
+            
+            <div class="exp-grid">
+                <!-- Exp 1: Savills -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-main">
+                            <span class="exp-year">2025 – 2026</span>
+                            <div class="exp-title-group">
+                                <h3>System &amp; Data Intern</h3>
+                                <span class="exp-company">Savills Vietnam (Full-time)</span>
+                            </div>
+                        </div>
+                        <button class="exp-toggle-btn" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="lang-vi">
+                            <li><b>Vận hành &amp; Báo cáo:</b> Thu thập, tổng hợp và làm sạch dữ liệu từ nhiều hệ thống vận hành nội bộ, chuẩn hóa dữ liệu phục vụ báo cáo/dashboard tuần/tháng (Excel, Power BI) cho team Audit.</li>
+                            <li><b>Kiểm soát dữ liệu:</b> Thực hiện kiểm tra dữ liệu hệ thống P3; xử lý dữ liệu trùng lặp/khuyết thiếu, đảm bảo tính toàn vẹn và chính xác 100% của dữ liệu cư dân.</li>
+                            <li>Phân tích dữ liệu hoạt động và hỗ trợ xác định các chỉ số KPI cho các bộ phận liên quan.</li>
+                        </ul>
+                        <ul class="lang-en" style="display:none;">
+                            <li><b>Operations &amp; Reporting:</b> Gathered, aggregated, and cleaned internal operational data; standardized datasets for weekly/monthly reports &amp; Power BI dashboards for the Audit team.</li>
+                            <li><b>Data Quality Control:</b> Audited P3 system data; resolved duplicate/missing entries to ensure 100% data integrity and accuracy for resident data.</li>
+                            <li>Analyzed operational metrics and assisted in defining KPIs across departments.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exp 2: Hoang Minh -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-main">
+                            <span class="exp-year">2024</span>
+                            <div class="exp-title-group">
+                                <h3>Data Entry Assistant</h3>
+                                <span class="exp-company">Hoang Minh Consulting Services Co., Ltd (Part-time)</span>
+                            </div>
+                        </div>
+                        <button class="exp-toggle-btn" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="lang-vi">
+                            <li>Sử dụng Excel và Google Sheets để nhập, cập nhật và quản lý các tập dữ liệu quy mô lớn.</li>
+                            <li>Áp dụng các kỹ thuật Data Validation để phát hiện và xử lý lỗi kịp thời, đảm bảo độ chính xác, tính nhất quán và toàn vẹn dữ liệu 100%.</li>
+                        </ul>
+                        <ul class="lang-en" style="display:none;">
+                            <li>Used Excel and Google Sheets to input, update, and manage large-scale datasets.</li>
+                            <li>Applied Data Validation techniques to detect and rectify errors promptly, maintaining 100% data consistency, accuracy, and integrity.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exp 3: Tutor -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-main">
+                            <span class="exp-year">2024 - 2025</span>
+                            <div class="exp-title-group">
+                                <h3>Freelance Tutor</h3>
+                                <span class="exp-company">Part-time</span>
+                            </div>
+                        </div>
+                        <button class="exp-toggle-btn" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="lang-vi">
+                            <li>Dạy Tin Học Văn Phòng (Word, Excel, PowerPoint) cho người đi làm.</li>
+                            <li>Dạy lập trình Scratch, Toán, Tiếng Việt cho học sinh Tiểu Học &amp; THCS.</li>
+                        </ul>
+                        <ul class="lang-en" style="display:none;">
+                            <li>Taught Office Productivity Tools (Word, Excel, PowerPoint) for working professionals.</li>
+                            <li>Taught Scratch programming, Math, and Vietnamese for Primary and Junior High students.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exp 4: HCMUE -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-main">
+                            <span class="exp-year">2022</span>
+                            <div class="exp-title-group">
+                                <h3>
+                                    <span class="lang-vi">Cử nhân Công Nghệ Thông Tin</span>
+                                    <span class="lang-en" style="display:none;">B.S. in Information Technology</span>
+                                </h3>
+                                <span class="exp-company">Ho Chi Minh City University of Education</span>
+                            </div>
+                        </div>
+                        <button class="exp-toggle-btn" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="lang-vi">
+                            <li>Tốt nghiệp loại Giỏi - Chuyên ngành Công Nghệ Thông tin.</li>
+                            <li>Đồ án tốt nghiệp: Xây dựng hệ thống học liệu điện tử môn toán cho học sinh tiểu học và mầm non.</li>
+                        </ul>
+                        <ul class="lang-en" style="display:none;">
+                            <li>Graduated with Honors - Majored in Information Technology.</li>
+                            <li>Graduation Thesis: Developed an interactive e-learning platform for elementary mathematics.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 style="margin-top: 36px; font-size: 1.4rem;">
+                <span class="lang-vi">Kỹ năng chuyên môn</span>
+                <span class="lang-en" style="display:none;">Technical Skills</span>
+            </h3>
+            <div class="skills-pills">
+                <span class="skill-pill"><i class="fas fa-database"></i> SQL</span>
+                <span class="skill-pill"><i class="fas fa-chart-pie"></i> Power BI</span>
+                <span class="skill-pill"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-pill"><i class="fas fa-code"></i> DAX</span>
+                <span class="skill-pill"><i class="fas fa-cloud"></i> Azure</span>
+                <span class="skill-pill"><i class="fas fa-table"></i> Excel</span>
+                <span class="skill-pill"><i class="fab fa-js"></i> JavaScript</span>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT & FOOTER ===== -->
+        <section id="contact">
+            <h2>
+                <span class="lang-vi">Kết nối</span>
+                <span class="lang-en" style="display:none;">Get in Touch</span>
+            </h2>
+            <div class="contact-wrap">
+                <div class="contact-form">
+                    <form id="simpleForm">
+                        <input type="text" id="form-name" placeholder="Tên của bạn" required />
+                        <input type="email" id="form-email" placeholder="Email của bạn" required />
+                        <textarea id="form-msg" placeholder="Lời nhắn nhanh..." rows="3"></textarea>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i> 
+                            <span class="lang-vi">Gửi tin nhắn</span>
+                            <span class="lang-en" style="display:none;">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <p style="font-weight:600; font-size: 1.1rem; margin-bottom: 12px;">
+                        <span class="lang-vi">Thông tin liên hệ:</span>
+                        <span class="lang-en" style="display:none;">Contact Information:</span>
+                    </p>
+                    <ul class="info-list">
+                        <li><i class="fas fa-phone-alt"></i> <span>+84 (0)822878477</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>diemquynhnet65@gmail.com</span></li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> 
+                            <span>
+                                <span class="lang-vi">Quận Tân Phú, TP. Hồ Chí Minh, Việt Nam</span>
+                                <span class="lang-en" style="display:none;">Tan Phu District, Ho Chi Minh City, Vietnam</span>
+                            </span>
+                        </li>
+                    </ul>
+
+                    <p style="font-weight:500; margin-top: 24px;">
+                        <span class="lang-vi">Hoặc tìm mình tại:</span>
+                        <span class="lang-en" style="display:none;">Or connect via:</span>
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/diemquynh55?tab=repositories" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:diemquynhnet65@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://zalo.me/0822878477" aria-label="Zalo" target="_blank"><i class="fas fa-comment-dots"></i></a>
+                        <a href="https://www.linkedin.com/in/quynh-pham-55605a282/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p style="margin-top: 18px; color: #4A4A4A;">
+                        <span class="lang-vi">✨ Luôn sẵn sàng trao đổi cơ hội hợp tác!</span>
+                        <span class="lang-en" style="display:none;">✨ Open for new opportunities &amp; collaboration!</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-note">
+                © 2026 Diem Quynh <i class="fas fa-heart" style="color:#b661a0;"></i> 
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ===== MODAL CASE STUDY ===== -->
+    <div class="modal-overlay" id="caseModal">
+        <div class="modal-box">
+            <h3 id="modalTitle">📘 Case Study</h3>
+            <p id="modalDesc">Nội dung dự án sẽ được hiển thị ở đây.</p>
+            <button class="modal-close" id="closeModalBtn">
+                <span class="lang-vi">Đóng</span>
+                <span class="lang-en" style="display:none;">Close</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
