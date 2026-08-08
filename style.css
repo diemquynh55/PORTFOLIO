@@ -244,6 +244,89 @@ h2:after {
     background: #f0f0f0;
 }
 
+/* ----- FEATURED BADGE (BEST SELLER STAR) ----- */
+.project-card {
+    position: relative; /* Đảm bảo badge căn theo khung card */
+}
+
+.featured-badge-wrap {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* Ngôi sao lơ lửng */
+.star-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #FFF9C4; /* Vàng pastel */
+    border: 1px solid #FFE082;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    animation: pulseStar 2.5s ease-in-out infinite;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.featured-badge-wrap:hover .star-badge {
+    transform: scale(1.25) rotate(15deg);
+    background: #FFF59D;
+}
+
+/* Tooltip hiển thị khi hover */
+.star-tooltip {
+    position: absolute;
+    top: -38px;
+    right: 0;
+    background: #2C3E50;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    pointer-events: none;
+}
+
+/* Mũi tên nhỏ dưới tooltip */
+.star-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    background: #2C3E50;
+    transform: rotate(45deg);
+}
+
+/* Hiện tooltip khi rê chuột */
+.featured-badge-wrap:hover .star-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Animation nhịp đập cho ngôi sao */
+@keyframes pulseStar {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-4px) scale(1.08);
+    }
+}
+
 /* ----- PROJECT FILTER (TABS) ----- */
 .filter-tabs {
     display: flex;
