@@ -468,7 +468,31 @@ h2:after {
     border-color: #8eb9a8;
     transform: translateY(-2px);
 }
+/* ----- CSS RIÊNG CHO CỤM 3 NÚT CỦA CARD 10 ----- */
+.card-actions-3btn {
+    display: flex;
+    gap: 6px; /* Khoảng cách vừa đủ giữa các nút */
+    align-items: center;
+    margin-top: auto;
+}
 
+/* Nút Case Study ưu tiên co giãn đẹp mắt */
+.card-actions-3btn .btn-primary {
+    flex: 1;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+/* 2 Nút GitHub và Live gọn gàng, vừa vặn */
+.card-actions-3btn .btn-compact {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    gap: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
 /* ----- EXPERIENCE CARDS (ACCORDION) ----- */
 .exp-grid {
     display: flex;
