@@ -20,7 +20,7 @@ body {
 }
 
 section {
-    padding: 60px 0 40px;
+    padding: 50px 0 35px;
 }
 
 /* ----- TYPOGRAPHY & MÀU SẮC PASTEL ----- */
@@ -57,6 +57,7 @@ h2:after {
     font-weight: 400;
     color: #4A4A4A;
 }
+
 /* ----- TOP BAR & LANGUAGE SWITCHER ----- */
 .top-bar {
     display: flex;
@@ -96,112 +97,6 @@ h2:after {
     box-shadow: 0 2px 5px rgba(0,0,0,0.03);
 }
 
-/* ----- AVATAR & FLOATING BADGES ----- */
-.avatar-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.hero-avatar img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #ffffff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    /* Hiệu ứng nhún nhảy nhẹ cho avatar */
-    animation: floatSoft 4s ease-in-out infinite;
-}
-
-/* Các nhãn pastel nhỏ lơ lửng quanh avatar */
-.floating-badge {
-    position: absolute;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 20px;
-    background: #ffffff;
-    border: 1px solid #f0ede6;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    white-space: nowrap;
-    animation: floatSoft 3s ease-in-out infinite alternate;
-}
-
-.floating-badge.badge-1 {
-    top: -5px;
-    left: -15px;
-    background: #E8F5E9; /* Mint pastel */
-    color: #1e3a2f;
-    animation-delay: 0s;
-}
-
-.floating-badge.badge-2 {
-    bottom: 10px;
-    left: -25px;
-    background: #F3E5F5; /* Lavender pastel */
-    color: #3e2f44;
-    animation-delay: 1s;
-}
-
-.floating-badge.badge-3 {
-    top: 25px;
-    right: -20px;
-    background: #E3F2FD; /* Baby blue pastel */
-    color: #1a2b4a;
-    animation-delay: 1.5s;
-}
-
-/* Keyframes hiệu ứng lơ lửng mềm mại */
-@keyframes floatSoft {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-8px) rotate(2deg);
-    }
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-}
-
-/* ----- HIỆU ỨNG TƯƠNG TÁC DỄ THƯƠNG (HOVER & CLICK) ----- */
-/* Thẻ kỹ thuật nhún nhẹ khi rê chuột vào */
-.skill-pill {
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.skill-pill:hover {
-    transform: translateY(-5px) scale(1.05);
-    background: #E8F5E9;
-    border-color: #b6d7c9;
-}
-
-/* Nút bấm có hiệu ứng nảy nhẹ */
-.btn-primary, .btn-outline, .filter-btn {
-    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.btn-primary:hover, .btn-outline:hover {
-    transform: translateY(-3px) scale(1.03);
-}
-
-/* CSS cho icon Trái tim / Ngôi sao tự biến mất khi click chuột */
-.click-sparkle {
-    position: fixed;
-    pointer-events: none;
-    font-size: 1.2rem;
-    z-index: 9999;
-    animation: sparkleUp 0.8s ease-out forwards;
-}
-
-@keyframes sparkleUp {
-    0% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(0.5) translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(1.3) translateY(-40px);
-    }
-}
 /* ----- HEADER / HERO ----- */
 .hero {
     display: flex;
@@ -209,7 +104,7 @@ h2:after {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    padding: 40px 0 20px;
+    padding: 35px 0 15px;
 }
 
 .hero-text {
@@ -230,9 +125,15 @@ h2:after {
     border-radius: 30px;
     display: inline-block;
 }
+
+/* Avatar & Floating Badges */
 .hero-avatar {
     flex: 0 0 140px;
     text-align: center;
+}
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
 }
 .hero-avatar img {
     width: 140px;
@@ -240,91 +141,77 @@ h2:after {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #ffffff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-    background: #f0f0f0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    animation: floatSoft 4s ease-in-out infinite;
 }
 
-/* ----- FEATURED BADGE (BEST SELLER STAR) ----- */
-.project-card {
-    position: relative; /* Đảm bảo badge căn theo khung card */
-}
-
-.featured-badge-wrap {
+.floating-badge {
     position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 10;
-    cursor: pointer;
-}
-
-/* Ngôi sao lơ lửng */
-.star-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background: #FFF9C4; /* Vàng pastel */
-    border: 1px solid #FFE082;
-    border-radius: 50%;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    animation: pulseStar 2.5s ease-in-out infinite;
-    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.featured-badge-wrap:hover .star-badge {
-    transform: scale(1.25) rotate(15deg);
-    background: #FFF59D;
-}
-
-/* Tooltip hiển thị khi hover */
-.star-tooltip {
-    position: absolute;
-    top: -38px;
-    right: 0;
-    background: #2C3E50;
-    color: #ffffff;
     font-size: 0.75rem;
-    font-weight: 600;
-    padding: 5px 12px;
+    font-weight: 700;
+    padding: 4px 10px;
     border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid #f0ede6;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(6px);
-    transition: all 0.25s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    pointer-events: none;
+    animation: floatSoft 3s ease-in-out infinite alternate;
+}
+.floating-badge.badge-1 {
+    top: -5px;
+    left: -15px;
+    background: #E8F5E9;
+    color: #1e3a2f;
+    animation-delay: 0s;
+}
+.floating-badge.badge-2 {
+    bottom: 10px;
+    left: -25px;
+    background: #F3E5F5;
+    color: #3e2f44;
+    animation-delay: 1s;
+}
+.floating-badge.badge-3 {
+    top: 25px;
+    right: -20px;
+    background: #E3F2FD;
+    color: #1a2b4a;
+    animation-delay: 1.5s;
 }
 
-/* Mũi tên nhỏ dưới tooltip */
-.star-tooltip::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    right: 12px;
-    width: 8px;
-    height: 8px;
-    background: #2C3E50;
-    transform: rotate(45deg);
+@keyframes floatSoft {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
 }
 
-/* Hiện tooltip khi rê chuột */
-.featured-badge-wrap:hover .star-tooltip {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+/* ----- SKILLS PILLS ----- */
+.skills-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
 }
-
-/* Animation nhịp đập cho ngôi sao */
-@keyframes pulseStar {
-    0%, 100% {
-        transform: translateY(0) scale(1);
-    }
-    50% {
-        transform: translateY(-4px) scale(1.08);
-    }
+.skill-pill {
+    background: #ffffff;
+    border-radius: 60px;
+    padding: 9px 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+    border: 1px solid #eae7e0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.skill-pill i {
+    font-size: 1.1rem;
+    color: #3a5a4a;
+}
+.skill-pill:hover {
+    transform: translateY(-4px) scale(1.04);
+    background: #E8F5E9;
+    border-color: #b6d7c9;
 }
 
 /* ----- PROJECT FILTER (TABS) ----- */
@@ -332,7 +219,7 @@ h2:after {
     display: flex;
     flex-wrap: wrap;
     gap: 8px 12px;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 .filter-btn {
     background: #f1f0ec;
@@ -344,7 +231,7 @@ h2:after {
     font-size: 0.95rem;
     color: #4A4A4A;
     cursor: pointer;
-    transition: 0.25s ease;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 .filter-btn:hover {
@@ -374,6 +261,7 @@ h2:after {
     backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .project-card:hover {
     transform: translateY(-6px);
@@ -430,10 +318,75 @@ h2:after {
 .badge.blue { background: #E3F2FD; color: #1a2b4a; }
 .badge.lavender { background: #F3E5F5; color: #3e2f44; }
 
+/* Featured Badge Star */
+.featured-badge-wrap {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    cursor: pointer;
+}
+.star-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #FFF9C4;
+    border: 1px solid #FFE082;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    animation: pulseStar 2.5s ease-in-out infinite;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.featured-badge-wrap:hover .star-badge {
+    transform: scale(1.25) rotate(15deg);
+    background: #FFF59D;
+}
+.star-tooltip {
+    position: absolute;
+    top: -38px;
+    right: 0;
+    background: #2C3E50;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    pointer-events: none;
+}
+.star-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    background: #2C3E50;
+    transform: rotate(45deg);
+}
+.featured-badge-wrap:hover .star-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+@keyframes pulseStar {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-4px) scale(1.08); }
+}
+
+/* Card Buttons */
 .card-actions {
     display: flex;
-    gap: 12px;
-    margin-top: 4px;
+    gap: 10px;
+    margin-top: auto;
 }
 .btn-outline, .btn-primary {
     padding: 6px 18px;
@@ -468,15 +421,14 @@ h2:after {
     border-color: #8eb9a8;
     transform: translateY(-2px);
 }
-/* ----- CSS RIÊNG CHO CỤM 3 NÚT CỦA CARD 10 ----- */
+
+/* 3 Nút Card 10 */
 .card-actions-3btn {
     display: flex;
-    gap: 6px; /* Khoảng cách vừa đủ giữa các nút */
+    gap: 6px;
     align-items: center;
     margin-top: auto;
 }
-
-/* Nút Case Study ưu tiên co giãn đẹp mắt */
 .card-actions-3btn .btn-primary {
     flex: 1;
     padding: 6px 8px;
@@ -484,8 +436,6 @@ h2:after {
     justify-content: center;
     white-space: nowrap;
 }
-
-/* 2 Nút GitHub và Live gọn gàng, vừa vặn */
 .card-actions-3btn .btn-compact {
     padding: 6px 10px;
     font-size: 0.8rem;
@@ -493,6 +443,7 @@ h2:after {
     white-space: nowrap;
     flex-shrink: 0;
 }
+
 /* ----- EXPERIENCE CARDS (ACCORDION) ----- */
 .exp-grid {
     display: flex;
@@ -500,7 +451,6 @@ h2:after {
     gap: 16px;
     margin: 10px 0 30px;
 }
-
 .exp-card {
     background: #ffffff;
     border-radius: 18px;
@@ -510,25 +460,21 @@ h2:after {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .exp-card:hover {
     border-color: #b6d7c9;
     box-shadow: 0 6px 16px rgba(0,0,0,0.04);
 }
-
 .exp-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .exp-main {
     display: flex;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 }
-
 .exp-year {
     font-weight: 700;
     color: #3a5a4a;
@@ -538,18 +484,15 @@ h2:after {
     font-size: 0.85rem;
     white-space: nowrap;
 }
-
 .exp-title-group h3 {
     font-size: 1.15rem;
     color: #2C3E50;
     margin-bottom: 2px;
 }
-
 .exp-company {
     font-size: 0.9rem;
     color: #666;
 }
-
 .exp-toggle-btn {
     background: transparent;
     border: none;
@@ -558,18 +501,15 @@ h2:after {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-
 .exp-card.open .exp-toggle-btn {
     transform: rotate(180deg);
 }
-
 .exp-body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease-out, opacity 0.25s ease;
     opacity: 0;
 }
-
 .exp-card.open .exp-body {
     max-height: 250px;
     opacity: 1;
@@ -577,12 +517,10 @@ h2:after {
     padding-top: 14px;
     border-top: 1px dashed #e8e5de;
 }
-
 .exp-body ul {
     list-style-type: none;
     padding-left: 5px;
 }
-
 .exp-body li {
     font-size: 0.92rem;
     color: #4A4A4A;
@@ -590,7 +528,6 @@ h2:after {
     padding-left: 18px;
     margin-bottom: 6px;
 }
-
 .exp-body li::before {
     content: "•";
     color: #8eb9a8;
@@ -599,34 +536,6 @@ h2:after {
     position: absolute;
     left: 0;
     top: -3px;
-}
-
-/* ----- SKILLS PILLS ----- */
-.skills-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 18px;
-    margin-top: 16px;
-}
-.skill-pill {
-    background: #ffffff;
-    border-radius: 60px;
-    padding: 10px 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.01);
-    border: 1px solid #eae7e0;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    transition: 0.2s;
-}
-.skill-pill i {
-    font-size: 1.2rem;
-    color: #3a5a4a;
-}
-.skill-pill:hover {
-    background: #f5f9f5;
-    transform: translateY(-3px);
 }
 
 /* ----- CONTACT & FOOTER ----- */
@@ -686,12 +595,10 @@ h2:after {
 .contact-info {
     flex: 1 1 260px;
 }
-
 .info-list {
     list-style: none;
     margin-bottom: 20px;
 }
-
 .info-list li {
     display: flex;
     align-items: center;
@@ -700,7 +607,6 @@ h2:after {
     color: #4A4A4A;
     font-size: 0.95rem;
 }
-
 .info-list li i {
     width: 32px;
     height: 32px;
@@ -746,7 +652,24 @@ h2:after {
     font-size: 0.9rem;
     color: #5f5f5f;
     border-top: 1px solid #e2ddd4;
-    padding-top: 28px;
+    padding-top: 24px;
+}
+
+/* Visitor Counter Pill */
+.visitor-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    border: 1px solid #eae7e0;
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    color: #4A4A4A;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+.visitor-counter i {
+    color: #8eb9a8;
 }
 
 /* ----- MODAL CASE STUDY ----- */
@@ -801,6 +724,19 @@ h2:after {
 }
 .modal-close:hover {
     background: #E3F2FD;
+}
+
+/* Click Sparkles */
+.click-sparkle {
+    position: fixed;
+    pointer-events: none;
+    font-size: 1.2rem;
+    z-index: 9999;
+    animation: sparkleUp 0.8s ease-out forwards;
+}
+@keyframes sparkleUp {
+    0% { opacity: 1; transform: translate(-50%, -50%) scale(0.5) translateY(0); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(1.3) translateY(-40px); }
 }
 
 /* ----- RESPONSIVE ----- */
