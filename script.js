@@ -117,24 +117,6 @@ function switchLanguage(lang) {
         form.reset();
     });
 
-    // ----- 5. BỘ ĐẾM SỐ LƯỢT TRUY CẬP (Counter API) -----
-    async function updateVisitorCount() {
-        const counterEl = document.getElementById('visitorCount');
-        try {
-            // Tự động tăng lượt truy cập mỗi khi tải trang
-            const res = await fetch('https://api.counterapi.dev/v1/diemquynh_portfolio_2026/visits/up');
-            const data = await res.json();
-            if (data && data.count) {
-                counterEl.textContent = data.count.toLocaleString();
-            } else {
-                counterEl.textContent = '1';
-            }
-        } catch (error) {
-            // Dự phòng nếu mất mạng/lỗi API
-            counterEl.textContent = '128+';
-        }
-    }
-    updateVisitorCount();
 
     // ----- 6. HIỆU ỨNG THẢ SPARKLE KHI CLICK CHUỘT -----
     document.addEventListener('click', function(e) {
