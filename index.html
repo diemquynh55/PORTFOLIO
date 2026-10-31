@@ -89,6 +89,10 @@
                 </button>
                 <button class="filter-btn" data-filter="bi">Power BI / BI</button>
                 <button class="filter-btn" data-filter="python">Data &amp; Python &amp; SQL</button>
+                <button class="filter-btn" data-filter="automation">
+        <span class="lang-vi" style="display:none;">Tự động hóa &amp; Giải pháp</span>
+        <span class="lang-en">Process Automation &amp; Solutions</span>
+    </button>
                 <button class="filter-btn" data-filter="de">Data Engineering &amp; AI</button>
                 <button class="filter-btn" data-filter="web">Web</button>
             </div>
@@ -204,7 +208,45 @@
 </div>
                 </div>
 
+                <!-- Card 12: Personal Finance & Automated Decision-Support Pipeline -->
+<div class="project-card" data-category="automation">
+    <!-- STICKER NGÔI SAO TRỌNG ĐIỂM -->
+    <div class="featured-badge-wrap">
+                        <span class="star-badge">⭐</span>
+                        <div class="star-tooltip">
+                            <span class="lang-vi" style="display:none;">Core Project (End-to-End) ✨</span>
+                            <span class="lang-en">Core Project (End-to-End) ✨</span>
+                        </div>
+                    </div>
 
+    <div class="project-thumb">
+        <!-- Thay bằng ảnh chụp màn hình Dashboard Excel của bạn -->
+        <img src="pic/auto1.jpg" alt="Personal Finance Pipeline" />
+    </div>
+
+    <div class="project-title">Mobile-to-Cloud Finance &amp; Decision-Support Pipeline</div>
+
+    <div class="project-desc">
+        <span class="lang-vi" style="display:none;">Xây dựng pipeline tự động hóa thu thập chi tiêu <b>1-chạm</b> từ di động qua <b>Webhook API &amp; Power Query</b>, phân tích hạn mức động theo thời gian thực trên <b>Excel</b>.</span>
+        <span class="lang-en">End-to-end automated pipeline capturing <b>1-tap mobile expenses</b> via <b>Webhook API &amp; Power Query</b>, powering real-time dynamic budgeting on <b>Excel</b>.</span>
+    </div>
+
+    <div class="project-tags">
+        <span class="badge mint">#iOS_Shortcuts</span>
+        <span class="badge lavender">#Webhook_API</span>
+        <span class="badge blue">#PowerQuery_ETL</span>
+        <span class="badge mint">#AdvancedExcel</span>
+        <span class="badge lavender">#AppsScript</span>
+    </div>
+
+    <div class="card-actions">
+        <button class="btn-primary btn-full-width" onclick="openStarModal('financeModal')">
+            <i class="fas fa-play-circle"></i>
+            <span class="lang-vi" style="display:none;">Xem Video Demo &amp; Phân tích STAR</span>
+            <span class="lang-en">Watch Demo &amp; STAR Case Study</span>
+        </button>
+    </div>
+</div>
                 <!-- Card 2: Netflix SQL -->
                 <div class="project-card" data-category="python">
                     <div class="project-thumb">
@@ -487,7 +529,7 @@
                 <div class="exp-card">
                     <div class="exp-header">
                         <div class="exp-main">
-                            <span class="exp-year">2024 - 2025</span>
+                            <span class="exp-year">2024 - 2026</span>
                             <div class="exp-title-group">
                                 <h3>Freelance Tutor</h3>
                                 <span class="exp-company">Part-time</span>
@@ -579,8 +621,7 @@
                     </p>
                     <div class="social-links">
                         <a href="https://github.com/diemquynh55?tab=repositories" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:diemquynhnet65@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="https://zalo.me/0822878477" aria-label="Zalo" target="_blank"><i class="fas fa-comment-dots"></i></a>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=diemquynhnet65@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Gmail"><i class="fas fa-envelope"></i></a>                        <a href="https://zalo.me/0822878477" aria-label="Zalo" target="_blank"><i class="fas fa-comment-dots"></i></a>
                         <a href="https://www.linkedin.com/in/quynh-pham-55605a282/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <p style="margin-top: 18px; color: #4A4A4A;">
@@ -610,6 +651,96 @@
             </button>
         </div>
     </div>
+
+    <!-- ===== MODAL CHUYÊN BIỆT: STAR & VIDEO DEMO (DỰ ÁN CÁ NHÂN 1) ===== -->
+<div class="modal-overlay" id="financeModal">
+    <div class="modal-box modal-star-box">
+        <button class="modal-close-icon" onclick="closeStarModal('financeModal')">&times;</button>
+        
+        <!-- Header Modal -->
+        <div class="star-modal-header">
+            <span class="private-badge">
+                <i class="fas fa-lock"></i> 
+                <span class="lang-vi" style="display:none;">Dự án Cá nhân</span>
+                <span class="lang-en">Personal Project</span>
+            </span>
+            <h3>Automated Mobile-to-Cloud Personal Finance &amp; Decision-Support Pipeline</h3>
+            <p class="elevator-pitch">
+                <span class="lang-vi" style="display:none;">"Xây dựng pipeline tự động hóa khép kín giúp thu thập dữ liệu chi tiêu 1-chạm từ thiết bị di động, chuyển hóa dữ liệu phi cấu trúc qua Webhook/Power Query, và xây dựng mô hình dữ liệu động trên Excel để kiểm soát ngân sách theo thời gian thực."</span>
+                <span class="lang-en">"An end-to-end automated pipeline that captures 1-tap mobile expense inputs, transforms unstructured data via Webhook/Power Query, and feeds a dynamic Excel data model for real-time budget control."</span>
+            </p>
+        </div>
+
+        <!-- Khu vực Video Demo & Luồng Kiến Trúc -->
+        <div class="star-video-section">
+            <div class="video-container">
+                <video controls poster="pic/auto1.jpg">
+                    <source src="pic/video_demo.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+            </div>
+            <div class="pipeline-flow">
+                <span>📱 iOS Back Tap (2s)</span> <i class="fas fa-arrow-right"></i>
+                <span>⚡ Apps Script Webhook</span> <i class="fas fa-arrow-right"></i>
+                <span>☁️ Google Sheets</span> <i class="fas fa-arrow-right"></i>
+                <span>⚙️ Power Query ETL</span> <i class="fas fa-arrow-right"></i>
+                <span>📊 Excel Dynamic Model</span>
+            </div>
+        </div>
+
+        <!-- Cấu trúc 4 Ô STAR -->
+        <div class="star-grid">
+            <!-- Situation -->
+            <div class="star-card star-s">
+                <div class="star-card-title"><span>S</span> Situation</div>
+                <p class="lang-vi" style="display:none;">Tôi nhận thấy mình hay bị vượt ngân sách ăn uống nhưng các ứng dụng trên thị trường đòi hỏi quá nhiều thao tác khiến tôi thường bỏ cuộc cập nhật sau vài ngày. Đồng thời, dữ liệu trên app không thể tùy biến phân tích sâu theo nhu cầu.</p>
+                <p class="lang-en">Frequently exceeded dining budgets, while existing market apps required high-friction manual entry (~60s/entry), leading to drop-offs. App data was also locked and lacked custom deep-dive analytics.</p>
+            </div>
+
+            <!-- Task -->
+            <div class="star-card star-t">
+                <div class="star-card-title"><span>T</span> Task</div>
+                <p class="lang-vi" style="display:none;">Thiết kế một luồng dữ liệu tự động hóa hoàn toàn: giảm thao tác nhập liệu xuống <b>dưới 5 giây</b>, tự động làm sạch văn bản tự do và đổ về một Dashboard quản trị có thể tự động cảnh báo mức độ tiêu tiền theo thời gian thực.</p>
+                <p class="lang-en">Architect a zero-friction automated pipeline: reduce data entry to <b>under 5 seconds</b>, automatically parse unstructured text inputs, and feed a real-time management dashboard with smart quota alerts.</p>
+            </div>
+
+            <!-- Action -->
+            <div class="star-card star-a">
+                <div class="star-card-title"><span>A</span> Action</div>
+                <ul class="lang-vi" style="display:none;">
+                    <li><b>Data Ingestion:</b> Tích hợp Apple Shortcuts (Back Tap) gửi JSON payload qua REST API.</li>
+                    <li><b>Cloud &amp; ETL:</b> Viết Webhook bằng Google Apps Script đổ về Sheets; dùng Power Query bóc tách số tiền/hạng mục tự động.</li>
+                    <li><b>Data Modeling:</b> Ứng dụng hàm Excel nâng cao (<code>LET</code>, <code>EOMONTH</code>, <code>TODAY</code>) tính hạn mức động theo ngày và cảnh báo màu tự động.</li>
+                </ul>
+                <ul class="lang-en">
+                    <li><b>Data Ingestion:</b> Configured iOS Shortcuts (Back Tap) to send JSON payloads via REST API.</li>
+                    <li><b>Cloud &amp; ETL:</b> Developed a serverless Google Apps Script Webhook to sync with Sheets; built Power Query ETL to parse amounts &amp; categories.</li>
+                    <li><b>Data Modeling:</b> Leveraged advanced Excel formulas (<code>LET</code>, <code>EOMONTH</code>, <code>TODAY</code>) for dynamic daily quotas and conditional alerts.</li>
+                </ul>
+            </div>
+
+            <!-- Result -->
+            <div class="star-card star-r">
+                <div class="star-card-title"><span>R</span> Result</div>
+                <ul class="lang-vi" style="display:none;">
+                    <li>⚡ <b>Tiết kiệm 95% thời gian:</b> Giảm thời gian nhập liệu xuống <b>5 giây</b> cho mỗi lần ghi nhận.</li>
+                    <li>🎯 <b>Độ chính xác &amp; Duy trì 100%:</b> Xóa bỏ hoàn toàn việc quên ghi chép, kiểm soát ngân sách tháng với hệ thống <b>hoàn toàn miễn phí.</b>.</li>
+                </ul>
+                <ul class="lang-en">
+                    <li>⚡ <b>95% Time Saved:</b> Reduced logging time from 60 seconds to just <b>5 seconds</b> per transaction.</li>
+                    <li>🎯 <b>100% Consistency &amp; Control:</b> Zero missed logs, 100% monthly budget adherence, and <b>$0</b> operational cost.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: right; margin-top: 20px;">
+            <button class="modal-close" onclick="closeStarModal('financeModal')">
+                <span class="lang-vi" style="display:none;">Đóng</span>
+                <span class="lang-en">Close</span>
+            </button>
+        </div>
+    </div>
+</div>
 
     <!-- JS -->
     <script src="script.js"></script>

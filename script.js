@@ -138,3 +138,22 @@ function switchLanguage(lang) {
         }, 800);
     });
 })();
+
+function openStarModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeStarModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        // Tự động tạm dừng video khi đóng modal
+        const video = modal.querySelector('video');
+        if (video) video.pause();
+    }
+};
